@@ -1,0 +1,15 @@
+http://localhost:3000
+
+### get blocks
+http://localhost:3000/blocks
+
+### post blocks
+POST http://localhost:3000/blocks 
+Content-Type: application/json
+
+{
+    "message": "hello world"
+}
+
+### get blocks
+http://localhost:3000/blocks/1
