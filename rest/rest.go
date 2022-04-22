@@ -48,11 +48,10 @@ func blocks(c *fiber.Ctx) error {
 func Start(port int) {
 	app := fiber.New()
 	app.Use(logger.New())
-
 	app.Get("/", homeHandler).Name("See Documentation")
 	app.Get("/blocks", blocks).Name("See All Blocks")
 	app.Post("/blocks", blocks).Name("Add A Block")
-	app.Get("/blocks/:height", block).Name("See A Block")
+	app.Get("/blocks/{hash:[a-f0-9]+}", block).Name("See A Block")
 
 	log.Fatal(app.Listen(fmt.Sprintf(":%d", port)))
 }

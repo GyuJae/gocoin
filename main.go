@@ -1,9 +1,7 @@
 package main
 
-import (
-	"github.com/gyujae/gocoin/rest"
-)
+import "github.com/gyujae/gocoin/blockchain"
 
 func main() {
-	rest.Start(3000)
+	blockchain.Blockchain()
 }
